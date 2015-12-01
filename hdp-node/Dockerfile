@@ -6,11 +6,9 @@ RUN yum update -y && yum install -y  \
 	java-1.7.0-openjdk \
 	java-1.7.0-openjdk-devel \
 	nano \
-	ntp \
 	openssh-clients \
 	wget 
-RUN chkconfig ntpd on
-RUN wget http://gw.ischool.syr.edu/node-setup.sh
-RUN source /root/node-setup.sh
-
-	
+# Setup Ambari Agent 
+RUN wget -nv http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.1.2/ambari.repo -O /etc/yum.repos.d/ambari.repo
+RUN yum install -y ambari-agent
+# TODO - Set the ambari server name 
