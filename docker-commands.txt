@@ -1,5 +1,8 @@
+# DOCKER DEV COMMANDS
 # run an image interactively to figure out commands:
-docker run -i -t -h test --add-host test:172.17.0.2 --name test ischool/hdpbase:v1 bash
+docker run -i -t -h test --add-host test:172.17.0.2 
+	-p 22
+	--name test ischool/hdpbase:v1 bash
 
-# build an image
-docker build 
+# build an image (in dir of docker file)
+docker build  -t ischool/hdpbase:v1 .
