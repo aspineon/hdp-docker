@@ -1,5 +1,0 @@
-# to run the container while building:
-docker run -t -i centos:6.7 /bin/bash
-
-# build the container
-docker build -t ischool/hdp:v? path/to/dockerfile

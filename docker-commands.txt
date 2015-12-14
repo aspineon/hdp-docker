@@ -1,0 +1,5 @@
+# run an image interactively to figure out commands:
+docker run -i -t -h test --add-host test:172.17.0.2 --name test ischool/hdpbase:v1 bash
+
+# build an image
+docker build 
